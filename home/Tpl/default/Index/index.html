@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="360得利网" /> 
+<meta name="description" content="360得利网" /> 
+<link href="__PUBLIC__/css/global.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/css/focus.css" rel="stylesheet" type="text/css" />
+<title>家居</title>
+<script src="__PUBLIC__/js/jquery-1.7.1.min.js"></script> 
+<!--[if IE 6]> 
+<script src="__PUBLIC__/js/DD_belatedPNG.js"></script> 
+<script> 
+DD_belatedPNG.fix('.top_k,.top_menu li a,.top_menu,.kuang_m,.date_pre,.date_next,.kuang_f,.link_main,img'); 
+</script> 
+<![endif]--> 
+</head>
+<body>
+<include file="Public:top" />
+<div class="container">
+		<div class="hdp">
+			<div id="banner"> 
+					<div id="banner_list"> 
+						<volist name="flashimg" id="vo">
+							<a href="{$vo.url}" ><img src="__PUBLIC__/upload/Flashimg/{$vo.image}" /></a>
+						</volist>
+					</div> 
+			  </div>     
+        </div>
+		<div class="new_c">
+			<h1><a href="__APP__"><img src="__PUBLIC__/images/more.png" /></a>行业动态</h1>
+			<div class="notice">[公告] <a href="">{$ann_news.title|utf_substr=28}</a></div>
+			<div class="new_cont">
+            	<volist name="news" id="news">
+				 	<p><em>2012-04-12</em><a href="__APP__/News/{$news.id}.shtml">{$news.name_1}</a></p>
+                </volist>
+			</div>
+		</div>
+		<div class="clear10"></div>
+		<div class="adertit"><img src="__PUBLIC__/images/adert3.png" /></div>
+		<div class="clear10"></div>
+		<div class="newstit">
+			<div class="ne_t"><a href="__APP__"><img src="__PUBLIC__/images/more.jpg" /></a>独家优惠课程</div>
+		</div>
+		<div class="class_div">
+			<table class="cltab" border="0" cellpadding="0" cellspacing="0" width="100%">
+            	<volist name="Exams" id="Exams">
+				<tr>
+					<td width="15%" align="center"><strong>&middot; [ 认证考试 ]</strong></td>
+					<td width="40%"><a href="">{$Exams.name_1|utf_substr=28}</a></td>
+					<td width="10%"><em>￥{$Exams.price}</em></td>
+					<td width="15%"><span style=" text-decoration:line-through">学校价格：￥{$Exams.yprice}</span></td>
+					<td width="20%" align="center"><a href="__APP__/Booking"><img src="__PUBLIC__/images/book.jpg" /></a></td>
+				</tr>
+                </volist>
+			</table>
+		</div>
+		<div class="adertit"><img src="__PUBLIC__/images/cert1.png" /></div>
+		<div class="clear10"></div>
+		<div class="ksclass">
+			<div class="kstit">课程介绍</div>
+			<div class="kstot">
+				<p><a href="">CISSP</a><a href="">BS25999</a><a href="">ISO202</a></p>
+				<p><a href="">CISSP</a><a href="">LA</a><a href="">IA/NA</a></p>
+				<p><a href="">CISSA</a><a href="">ITIL</a></p>
+				<p><a href="">COBIT</a><a href="">IOS20071</a></p>
+				<p><a href="">PMP</a><a href="">IA/LA</a></p>
+			</div>
+		</div>
+		<div class="clear10"></div>
+		<div class="adertit"><img src="__PUBLIC__/images/adert2.jpg" /></div>
+		<div class="clear10"></div>
+		
+		<div class="ksclass">
+			<div class="kstit">课程介绍</div>
+			<div class="cla_div">
+				<h3>管理</h3>
+				<div class="clas-mod">信息安全管理</div><div class="clas-mod">信息管理方法</div>
+				<div class="clas-mod">考试论证</div><div class="clas-mod">测试体验价</div><div class="clas-mod">信息安全</div>
+				<h3>意识</h3>
+				<div class="clas-mod">信息安全管理</div><div class="clas-mod">信息管理方法</div>
+				<div class="clas-mod">考试论证</div><div class="clas-mod">测试体验价</div>
+			</div>
+		</div>	
+</div>
+<div class="clear10"></div>
+<include file="Public:footer" />
+</body>
+</html>
